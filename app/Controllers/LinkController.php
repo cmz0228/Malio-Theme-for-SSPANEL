@@ -567,6 +567,8 @@ class LinkController extends BaseController
             case 'v2rayn':
                 $item['ps'] = $item['remark'];
                 $item['type'] = $item['headerType'];
+                $item['port'] = (string)$item['port'];
+                $item['aid'] = (string)$item['aid'];
                 $return = 'vmess://' . base64_encode(json_encode($item, 320));
                 break;
             case 'kitsunebi':
